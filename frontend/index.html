@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech Translation</title>
+    <!-- Add Bootstrap 4 CDN -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 class="text-center">Speech Translation</h1>
+
+        <!-- User inputs -->
+        <div class="form-group">
+            <label for="speechLanguage">Speech Language:</label>
+            <select id="speechLanguage" class="form-control">
+                <!-- Options will be dynamically populated here -->
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="translateTo">Translate To:</label>
+            <select id="translateTo" class="form-control">
+                <!-- Options will be dynamically populated here -->
+            </select>
+        </div>
+
+        <!-- Button to start listening -->
+        <button id="submitButton" class="btn btn-primary btn-block">Submit and Start Listening</button>
+
+        <!-- Display the microphone container -->
+        <div id="microphoneContainer">
+            <div id="microphoneIcon">🎤</div>
+            <div id="soundWave">🌊🌊🌊</div> <!-- Simple representation of sound waves -->
+        </div>
+
+        <!-- Display the recognized text and translated text -->
+        <p class="mt-4"><strong>Recognized Text:</strong> <span id="recognizedText">Waiting for speech...</span></p>
+        <p><strong>Translated Text:</strong> <span id="translatedText">Waiting for translation...</span></p>
+
+        <!-- Button to speak the translated text -->
+        <button id="speakButton" class="btn btn-success" style="display:none;">Speak Translated Text</button>
+    </div>
+
+    <!-- Add Bootstrap 4 JS and Popper.js CDN -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
